@@ -158,8 +158,8 @@ feats = test.select_dtypes(
 
 predictions = model.predict(feats)
 final_predictions = np.exp(predictions)
-print ("Original predictions are: \n", predictions[:5], "\n")
-print ("Final predictions are: \n", final_predictions[:5])
+print ("Original Predictions are: \n", predictions[:5], "\n")
+print ("Final Predictions are: \n", final_predictions[:5])
 submission['SalePrice'] = final_predictions
 submission.head()
 submission.to_csv('submission1.csv', index=False)
